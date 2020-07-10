@@ -6,13 +6,19 @@ gd-utils的Docker版,快速搭建google drive 转存工具
 # 使用方法:
 gd-utils的Docker版,使用方法:
 
+80端口 文件管理
+
+4200端口: wenshell
+
+23333端口: tg机器人
+
 `docker run --restart=always  -d \
 -e USERPWD="3024-night" \
 -p 4200:4200 \
 -p 80:80 \
 -p 23333:23333 \
 --name gd-utils \
-gdtool/gd-utils-Docker
+gdtool/gd-utils-docker
 `
 
 ## 原项目
