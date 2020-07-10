@@ -1,0 +1,50 @@
+diff --git a/libhttp/ssl.c b/libhttp/ssl.c
+index 6d09035..5fc9bdc 100644
+--- a/libhttp/ssl.c
++++ b/libhttp/ssl.c
+@@ -1016,11 +1016,11 @@ int sslPromoteToSSL(struct SSLSupport *ssl, SSL **sslHndl, int fd,
+ }
+ 
+ BIO *sslGetNextBIO(BIO *b) {
+-#if OPENSSL_VERSION_NUMBER <= 0x10100000L
++/*#if OPENSSL_VERSION_NUMBER <= 0x10100000L
+   return b->next_bio;
+-#else
++#else*/
+   return BIO_next(b);
+-#endif
++//#endif
+ }
+ 
+ void sslFreeHndl(SSL **sslHndl) {
+diff --git a/shellinabox/launcher.c b/shellinabox/launcher.c
+index ba54b36..96f0585 100644
+--- a/shellinabox/launcher.c
++++ b/shellinabox/launcher.c
+@@ -1573,19 +1573,19 @@ static void childProcess(struct Service *service, int width, int height,
+ #ifdef HAVE_UTMPX_H
+   if (enableUtmpLogging) {
+     setutxent();
+-    struct utmpx utmpx            = utmp->utmpx;
++    struct utmpx utmpxx            = utmp->utmpx;
+     if (service->useLogin || service->authUser) {
+-      utmpx.ut_type               = LOGIN_PROCESS;
+-      memset(utmpx.ut_host, 0, sizeof(utmpx.ut_host));
++      utmpxx.ut_type               = LOGIN_PROCESS;
++      memset(utmpxx.ut_host, 0, sizeof(utmpxx.ut_host));
+     }
+-    pututxline(&utmpx);
++    pututxline(&utmpxx);
+     endutxent();
+ 
+ #if defined(HAVE_UPDWTMP) || defined(HAVE_UPDWTMPX)
+     if (!utmp->useLogin) {
+-      memset(&utmpx.ut_user, 0, sizeof(utmpx.ut_user));
+-      strncat(&utmpx.ut_user[0], "LOGIN", sizeof(utmpx.ut_user) - 1);
+-      updwtmpx("/var/log/wtmp", &utmpx);
++      memset(&utmpxx.ut_user, 0, sizeof(utmpxx.ut_user));
++      strncat(&utmpxx.ut_user[0], "LOGIN", sizeof(utmpxx.ut_user) - 1);
++      updwtmpx("/var/log/wtmp", &utmpxx);
+     }
+ #endif
+   }
