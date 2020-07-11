@@ -24,7 +24,7 @@ gd-utils的Docker版,使用方法:
 
 ```
 docker run --restart=always  -d \
--e USERPWD="your_root_passsword" \
+-e USERPWD="your_self_passsword" \
 -p 4200:4200 \
 -p 80:80 \
 -p 23333:23333 \
