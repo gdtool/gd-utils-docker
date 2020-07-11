@@ -13,7 +13,7 @@ gd-utils的Docker版,使用方法:
 
 **80端口:** 文件管理
 
-**4200端口:** webshell
+**4200端口:** webshell,账号:`gd`,密码:`your_root_passsword`
 
 **23333端口:** tg机器人
 
