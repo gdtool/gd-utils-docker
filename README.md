@@ -17,7 +17,7 @@ gd-utils的Docker版,使用方法:
 
 **23333端口:** tg机器人
 
-**持久化目录:** /gd-utils/sa/
+**持久化目录:** /gd-utils/
 
 **config.js已经软链到**`/gd-utils/sa/config.js`
 
@@ -28,7 +28,7 @@ docker run --restart=always  -d \
 -p 80:80 \
 -p 23333:23333 \
 --name gd-utils \
--v /gd-utils/sa:/root/sa \
+-v /gd-utils:/root/sa \
 gdtool/gd-utils-docker
 ```
 
