@@ -19,8 +19,6 @@ gd-utils的Docker版,使用方法:
 
 **持久化目录:** /gd-utils/
 
-**config.js已经软链到**`/gd-utils/sa/config.js`
-
 ```
 docker run --restart=always  -d \
 -e USERPWD="your_root_passsword" \
