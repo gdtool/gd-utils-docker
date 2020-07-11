@@ -46,7 +46,6 @@ RUN  adduser  gd -u 20001 -D -S -s /bin/bash -G root && \
 	echo -e "${USERPWD}\n${USERPWD}" | passwd root && \
 	echo -e "${USERPWD}\n${USERPWD}" | passwd gd && \
 	chmod 4755 /bin/busybox	
-USER gd
 EXPOSE 23333 4200 80
 VOLUME /gd-utils
 
