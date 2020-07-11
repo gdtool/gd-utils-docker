@@ -15,7 +15,7 @@ gd-utils的Docker版,使用方法:
 
 **4200端口:** webshell,账号:`gd`,密码:`your_root_passsword`
 
-**23333端口:** tg机器人
+**23333端口:** gd-utils机器人
 
 **80端口:** 文件管理,**默认不启动**  **默认不启动**   **默认不启动**
 > 启动方法:登录webshell 执行`filebrowser &`,账号密码:admin
