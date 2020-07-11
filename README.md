@@ -18,7 +18,7 @@ gd-utils的Docker版,使用方法:
 **23333端口:** gd-utils机器人
 
 **80端口:** 文件管理,**默认不启动**  **默认不启动**   **默认不启动**
-> 启动方法:登录webshell 执行`filebrowser &`,账号密码:admin
+> 启动方法:登录webshell 执行`cd / && filebrowser &`,账号密码:admin
 
 **持久化目录:** /gd-utils/
 
