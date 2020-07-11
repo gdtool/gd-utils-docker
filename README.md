@@ -1,5 +1,4 @@
-# gd-utils-Docker
-gd-utils的Docker版,快速搭建google drive 转存工具
+# gd-utils的Docker版,快速搭建google drive 转存工具
 
 **docker内包含:**
 - 网页版shell,方便执行git pull等命令
