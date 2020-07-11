@@ -32,17 +32,7 @@ docker run --restart=always  -d \
 -v /gd-utils:/root/gd-utils \
 gdtool/gd-utils-docker
 ```
-如果嫌webshell切换root麻烦,可使用root直接登录的docker **危险**:
-```
-docker run --restart=always  -d \
--e USERPWD="your_self_passsword" \
--p 4200:4200 \
--p 80:80 \
--p 23333:23333 \
---name gd-utils \
--v /gd-utils:/root/gd-utils \
-gdtool/gd-utils-docker-autologin
-```
+
 ## 原项目
 [gd-utils](https://github.com/iwestlin/gd-utils)
 
