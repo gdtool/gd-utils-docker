@@ -3,7 +3,7 @@
 **docker内包含:**
 - 网页版shell,方便执行git pull等命令
 - 文件管理器,方便上传sa文件以及编辑配置文件和备份数据库
-- tg机器人,为方便持久化,**config.js已经软链到**`/gd-utils/sa/config.js`
+- tg机器人,
 
 
 
@@ -18,6 +18,8 @@ gd-utils的Docker版,使用方法:
 **23333端口:** tg机器人
 
 **持久化目录:** /gd-utils/sa/
+
+**config.js已经软链到**`/gd-utils/sa/config.js`
 
 ```
 docker run --restart=always  -d \
