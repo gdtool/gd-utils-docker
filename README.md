@@ -3,7 +3,7 @@
 **docker内包含:**
 - **网页版shell**:方便执行git pull等命令
 - **文件管理器**,方便上传sa文件以及编辑配置文件和备份数据库
-- **tg机器人**
+- **gd-utils机器人**
 > 具体gd-utils教程请移步官网: [gd-utils](https://github.com/iwestlin/gd-utils)
 
 
