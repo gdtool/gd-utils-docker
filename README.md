@@ -1,9 +1,10 @@
 # gd-utils的Docker版,快速搭建google drive 转存工具
 
 **docker内包含:**
-- 网页版shell:方便执行git pull等命令
-- 文件管理器,方便上传sa文件以及编辑配置文件和备份数据库
-- tg机器人,
+- **网页版shell**:方便执行git pull等命令
+- **文件管理器**,方便上传sa文件以及编辑配置文件和备份数据库
+- **tg机器人**
+> 具体gd-utils教程请移步官网: [gd-utils](https://github.com/iwestlin/gd-utils)
 
 
 
@@ -16,7 +17,7 @@ gd-utils的Docker版,使用方法:
 
 **23333端口:** tg机器人
 
-**80端口:** 文件管理,**默认不启动**
+**80端口:** 文件管理,**默认不启动**  **默认不启动**   **默认不启动**
 > 启动方法:登录webshell 执行`filebrowser &`,账号密码:admin
 
 **持久化目录:** /gd-utils/
