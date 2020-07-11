@@ -22,8 +22,6 @@ ARG VERSION
 RUN set -ex \
         && git clone https://github.com/iwestlin/gd-utils /gd-utils \
         && cd /gd-utils \
-		&& mv -f /gd-utils/config.js /gd-utils/sa/config.js \
-		&& ln -sf /gd-utils/sa/config.js /gd-utils/config.js \
         && npm install \
         && apk del .build-deps
 
@@ -45,7 +43,7 @@ RUN chmod +x /start.sh && \
 	chmod 777 /gd-utils/sa/shellinaboxd
 		
 EXPOSE 23333 4200 80
-VOLUME /gd-utils/sa
+VOLUME /gd-utils
 
 
 ENTRYPOINT [ "/start.sh" ]
