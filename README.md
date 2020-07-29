@@ -29,7 +29,7 @@ docker run --restart=always  -d \
 -p 80:80 \
 -p 23333:23333 \
 --name gd-utils \
--v /gd-utils:/root/gd-utils \
+-v /gd-utils:/gd-utils \
 gdtool/gd-utils-docker
 ```
 
