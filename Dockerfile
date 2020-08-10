@@ -34,13 +34,13 @@ RUN apk add --no-cache --update --virtual build-deps alpine-sdk autoconf automak
         autoreconf -i && \
         ./configure --prefix=/shellinabox/bin && \
         make && make install && cd / && \
-        mv /shellinabox/bin/bin/shellinaboxd /gd-utils/sa/shellinaboxd && \
-        rm -rf /shellinabox && \
+        #mv /shellinabox/bin/bin/shellinaboxd /gd-utils/sa/shellinaboxd && \
+        #rm -rf /shellinabox && \
         apk del build-deps && rm -rf /var/cache/apk/
 COPY filebrowser.json /.filebrowser.json
 RUN curl -fsSL https://filebrowser.xyz/get.sh | bash
 RUN chmod +x /start.sh && \
-	chmod 777 /gd-utils/sa/shellinaboxd
+	chmod 777 /shellinabox/bin/bin/shellinaboxd
 #添加gd账号,设置密码
 #RUN  adduser  gd -u 20001 -D -S -s /bin/bash -G root && \
 #	echo -e "${USERPWD}\n${USERPWD}" | passwd root && \
