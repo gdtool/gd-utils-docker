@@ -12,11 +12,30 @@
 
 为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
 
-# 使用方法:
-gd-utils的Docker版,使用方法:
+# 简单使用方法:
+ 1. 启动容器:
+ 
+ ```
+docker run --restart=always  -d \
+-e USERPWD="pwd123456" \
+-p 4200:4200 \
+-p 80:80 \
+-p 23333:23333 \
+--name gd-utils \
+-v /root/gd-utils/sa:/gd-utils/sa \
+gdtool/gd-utils-docker
+```
 
+  2. 打开`localhost:80`进入文件管理器(账号密码`admin`),进入目录`/gd-utils/sa/`
+  3. 修改配置文件`/gd-utils/sa/config.js`
+  4. 上传sa文件到`/gd-utils/sa/`
+  5. 重启容器
+  
+  或者修改宿主机`/root/gd-utils/sa`的文件,效果同上
 
-**4200端口:** webshell,账号:`gd`,密码:`your_self_passsword`
+# 其他说明爱看就看,不看也没事儿:
+
+**4200端口:** webshell,账号:`gd`,密码:`pwd123456`
 
 **23333端口:** gd-utils机器人
 
@@ -31,16 +50,7 @@ gd-utils的Docker版,使用方法:
 为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
 
 
-```
-docker run --restart=always  -d \
--e USERPWD="pwd123456" \
--p 4200:4200 \
--p 80:80 \
--p 23333:23333 \
---name gd-utils \
--v /root/sa:/gd-utils/sa \
-gdtool/gd-utils-docker
-```
+
 
 ## 原项目
 [gd-utils](https://github.com/iwestlin/gd-utils)
