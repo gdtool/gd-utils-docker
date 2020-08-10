@@ -10,6 +10,7 @@
 
 # 注意:
 
+为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
 
 # 使用方法:
 gd-utils的Docker版,使用方法:
