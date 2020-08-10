@@ -36,8 +36,7 @@ RUN apk add --no-cache --update --virtual build-deps alpine-sdk autoconf automak
         make && make install && cd / && \
         #mv /shellinabox/bin/bin/shellinaboxd /gd-utils/sa/shellinaboxd && \
         #rm -rf /shellinabox && \
-        apk del build-deps && rm -rf /var/cache/apk/ && \
-	apk add git
+        apk del build-deps && rm -rf /var/cache/apk/ 
 COPY filebrowser.json /.filebrowser.json
 RUN curl -fsSL https://filebrowser.xyz/get.sh | bash
 RUN chmod +x /start.sh && \
