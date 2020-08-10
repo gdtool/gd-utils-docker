@@ -13,8 +13,7 @@
 为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
 
 # 简单使用方法:
- 1. 启动容器:
- 
+ 1. 启动容器,假设挂载目录为`/root/gd-utils/sa`
  ```
 docker run --restart=always  -d \
 -e USERPWD="pwd123456" \
@@ -25,13 +24,11 @@ docker run --restart=always  -d \
 -v /root/gd-utils/sa:/gd-utils/sa \
 gdtool/gd-utils-docker
 ```
-
-  2. 打开`localhost:80`进入文件管理器(账号密码`admin`),进入目录`/gd-utils/sa/`
-  3. 修改配置文件`/gd-utils/sa/config.js`
-  4. 上传sa文件到`/gd-utils/sa/`
-  5. 重启容器
+  2. 修改配置文件`/root/gd-utils/sa/config.js`
+  3. 上传sa文件到`/root/gd-utils/sa/`
+  4. 重启容器
   
-  或者修改宿主机`/root/gd-utils/sa`的文件,效果同上
+> 如果使用云容器,可以打开`localhost:80`进入容器文件管理器(账号密码`admin`),修改、上传配置文件
 
 # 其他说明爱看就看,不看也没事儿:
 
