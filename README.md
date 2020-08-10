@@ -9,7 +9,7 @@
 
 
 # 注意:
-为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
+
 
 # 使用方法:
 gd-utils的Docker版,使用方法:
@@ -19,11 +19,15 @@ gd-utils的Docker版,使用方法:
 
 **23333端口:** gd-utils机器人
 
-**80端口:** 文件管理,**默认不启动**  **默认不启动**   **默认不启动**
-> 启动方法:登录webshell;`su root` 然后执行`cd / && filebrowser &`,账号密码:admin
+**80端口:** 文件管理默认启动,**注意安全**
+~~**默认不启动**  **默认不启动**   **默认不启动**
+> 启动方法:登录webshell;`su root` 然后执行`cd / && filebrowser &`,~~
+账号密码:admin
 
-**持久化目录:** /gd-utils/sa/
+**持久化目录:** 
 
+/gd-utils/sa/
+为方便持久化,源代码的`/gd-utils/config.js` 和 ` /gd-utils/gdurl.sqlite` 已经软链接到目录`/gd-utils/sa/`
 
 
 ```
