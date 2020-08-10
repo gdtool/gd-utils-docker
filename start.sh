@@ -22,6 +22,6 @@ echo -e "${USERPWD}\n${USERPWD}" | passwd gd
 chmod 4755 /bin/busybox
 node /gd-utils/server.js &
 #免登陆:/gd-utils/sa/shellinaboxd --no-beep -t  --service "/:root:root:/:/bin/bash" &
-/gd-utils/sa/shellinaboxd --no-beep -t --user root -s "/:LOGIN"  
+/shellinabox/bin/bin/shellinaboxd --no-beep -t --user root -s "/:LOGIN"  
 #filebrowser默认不启动
 #filebrowser   &
